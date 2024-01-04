@@ -21,7 +21,7 @@ export const getNote = async (req, res) => {
         })
         res.json(note)
     } catch (error) {
-        res.json("--")
+        res.json({message: error.message})
     }
 }
 
@@ -58,3 +58,18 @@ export const deleteNote = async (req, res) => {
         res.json({message: error.message})
     }
 }
+
+/* //Filter by tags if it is neccessary
+export const tagNote = async (req, res) => {
+    try { 
+     const filterTag = await NoteModel.findAll({
+       if(contenido) {
+        filterTag = notes.filter(note => note.contenido.includes(contenido));
+       }
+    })
+    res.json(filterTag)
+    }catch (error) {
+        res.json({message: error.message})
+    }
+}
+ */
