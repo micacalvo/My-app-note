@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import database from "./database/db.js";
 import noteRoutes from "../backend/routes/routes.js"
-import tagRoutes from "../backend/routes/routes.js"
+//import tagRoutes from "../backend/routes/routes.js"
 
 const app = express()
 app.use(cors())
@@ -21,6 +21,6 @@ app.get('/', (req, res) => {
     res.send('Hola')
 })
 
-app.listen(8080, () => {
+app.listen(8050, () => {
     console.log("Server running on port 8080")
 })
